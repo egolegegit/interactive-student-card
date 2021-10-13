@@ -83,7 +83,7 @@ const EditCard = () => {
 
   return (
     <>
-      <div className='w-3/5 h-auto p-4 card dark:bg-transparent dark:border-green-400'>
+      <div className='w-3/5 h-auto p-4 shadow card dark:bg-transparent dark:border-green-400'>
         <h1 className='dark:text-gray-300'>Карточка студента</h1>
         <>
           <form

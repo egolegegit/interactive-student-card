@@ -111,3 +111,9 @@ body {
     transform: translateX(200%);
   }
 }
+
+.theme-button{
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+}
