@@ -33,7 +33,7 @@ const CardStudent = ({
             )}
 
             {item === 'birthday' && (
-              <span className='text-lg'>{` (${getAge(
+              <span className='text-lg dark:text-gray-300'>{` (${getAge(
                 dataCard[item]
               )} ${renderPhrase(dataCard[item], declination)})`}</span>
             )}

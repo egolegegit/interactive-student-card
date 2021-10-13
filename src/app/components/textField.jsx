@@ -5,6 +5,7 @@ const TextField = ({
   name,
   placeholder,
   value,
+  type,
   onChange,
   error,
 }) => {
@@ -29,7 +30,7 @@ const TextField = ({
 
       <div className='input-group'>
         <input
-          type={'text'}
+          type={type}
           id={name}
           name={name}
           value={value}
@@ -51,6 +52,7 @@ TextField.propTypes = {
   label: PropTypes.string,
   type: PropTypes.string,
   name: PropTypes.string,
+  type: PropTypes.string,
   value: PropTypes.string,
   placeholder: PropTypes.string,
   error: PropTypes.string,
