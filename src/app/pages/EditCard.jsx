@@ -44,7 +44,7 @@ const EditCard = () => {
     },
     portfolio: {
       isRequired: { message: '* Поле Портфолио обязательно для заполнения' },
-      isUrl: { message: '* Поле Портфолио не корректно' },
+      isUrl: { message: '* Поле Портфолио не корректно. Введите URL' },
     },
   }
 
@@ -57,7 +57,9 @@ const EditCard = () => {
     setisDataCard(typeof raw === 'string' ? true : false)
   }, [])
 
-  useEffect(() => {}, [data])
+    useEffect(() => {
+      validate()
+    }, [data])
 
   const validate = () => {
     const errors = validator(data, validatorConfig)
@@ -89,28 +91,28 @@ const EditCard = () => {
             className='flex flex-col items-center w-full text-center'
           >
             <TextField
-              label='firstName'
+              label='Имя'
               name='firstName'
               value={data.firstName}
               onChange={handleChange}
               error={errors.firstName}
             />
             <TextField
-              label='lastName'
+              label='Фамилия'
               name='lastName'
               value={data.lastName}
               onChange={handleChange}
               error={errors.lastName}
             />
             <TextField
-              label='birthday'
+              label='Год рождения'
               name='birthday'
               value={data.birthday}
               onChange={handleChange}
               error={errors.birthday}
             />
             <TextField
-              label='portfolio'
+              label='Портфолио'
               name='portfolio'
               type={'url'}
               value={data.portfolio}
