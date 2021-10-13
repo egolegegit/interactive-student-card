@@ -1,3 +1,6 @@
+import getYears from "./getYears"
+
+/* eslint-disable no-useless-escape */
 export default function validator(data, config) {
   const errors = {}
 
@@ -10,19 +13,6 @@ export default function validator(data, config) {
         break
       }
 
-      case 'isEmail':
-        {
-          const emailRegExp = /^\S+@\S+\.\S+$/g
-          statusValidate = !emailRegExp.test(data)
-        }
-        break
-
-      case 'isCapitalSymbol': {
-        const capitalRegExp = /[A-Z]+/g
-        statusValidate = !capitalRegExp.test(data)
-        break
-      }
-
       case 'isContainDigit': {
         const difitRegExp = /\d+/g
         statusValidate = !difitRegExp.test(data)
@@ -30,9 +20,22 @@ export default function validator(data, config) {
       }
 
       case 'isLength': {
-        console.log(data.length)
         statusValidate =
           data.length < config.value || data.length > config.value
+        break
+      }
+
+      case 'isYears': {
+        statusValidate = getYears(data)
+          
+        break
+      }
+
+      case 'isUrl': {
+        const urlRegExp =
+          /(?:(?:https?|ftp|file):\/\/|www\.|ftp\.)(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[-A-Z0-9+&@#\/%=~_|$?!:,.])*(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[A-Z0-9+&@#\/%=~_|$])/gim
+        statusValidate = !urlRegExp.test(data)
+
         break
       }
 

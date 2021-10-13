@@ -16,7 +16,7 @@ const EditCard = () => {
   const [errors, setErrors] = useState({})
   const [isDataCard, setisDataCard] = useState()
   const [modal, setModal] = useState(false)
-  const Toggle = () => setModal(!modal)
+  const ToggleModal = () => setModal(!modal)
 
   const handleChange = ({ target }) => {
     setData((prevState) => ({ ...prevState, [target.name]: target.value }))
@@ -38,9 +38,13 @@ const EditCard = () => {
       isContainDigit: {
         message: '* Поле Год рождения не корректно',
       },
+      isYears: {
+        message: '* Возраст студента не старше 65 / не младше 16',
+      },
     },
     portfolio: {
       isRequired: { message: '* Поле Портфолио обязательно для заполнения' },
+      isUrl: { message: '* Поле Портфолио не корректно' },
     },
   }
 
@@ -53,9 +57,7 @@ const EditCard = () => {
     setisDataCard(typeof raw === 'string' ? true : false)
   }, [])
 
-  useEffect(() => {
-    validate()
-  }, [data])
+  useEffect(() => {}, [data])
 
   const validate = () => {
     const errors = validator(data, validatorConfig)
@@ -74,7 +76,7 @@ const EditCard = () => {
 
     localStorage.setItem('data', JSON.stringify(data))
     setisDataCard(true)
-    Toggle()
+    ToggleModal()
   }
 
   return (
@@ -110,6 +112,7 @@ const EditCard = () => {
             <TextField
               label='portfolio'
               name='portfolio'
+              type={'url'}
               value={data.portfolio}
               onChange={handleChange}
               error={errors.portfolio}
@@ -132,7 +135,11 @@ const EditCard = () => {
           </form>
         </>
       </div>
-      <Modal show={modal} title='Карточка обновлена!' close={Toggle}></Modal>
+      <Modal
+        show={modal}
+        title='Карточка обновлена!'
+        close={ToggleModal}
+      ></Modal>
     </>
   )
 }
