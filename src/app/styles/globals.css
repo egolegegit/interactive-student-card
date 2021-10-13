@@ -34,7 +34,7 @@
   }
 
   .layout-app {
-    @apply flex flex-col flex-auto min-h-screen px-6;
+    @apply flex flex-col items-center justify-center flex-auto min-h-screen px-6;
   }
 
   .layout-header,
