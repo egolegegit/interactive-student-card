@@ -1,6 +1,8 @@
 {
   "name": "stravital",
   "version": "0.1.0",
+  "private": true,
+  "homepage": "",
   "description": "A simple React starter template for your next react application.",
   "keywords": [
     "starter template",
@@ -13,8 +15,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview",
-    "deploy": "gh-pages -d build"
+    "serve": "vite preview"
   },
   "dependencies": {
     "bootstrap": "^5.1.0",
