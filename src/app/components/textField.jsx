@@ -52,7 +52,6 @@ TextField.propTypes = {
   label: PropTypes.string,
   type: PropTypes.string,
   name: PropTypes.string,
-  type: PropTypes.string,
   value: PropTypes.string,
   placeholder: PropTypes.string,
   error: PropTypes.string,

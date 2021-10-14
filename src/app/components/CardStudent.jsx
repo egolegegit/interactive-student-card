@@ -17,6 +17,7 @@ const CardStudent = ({
     portfolio: 'Портфолио',
   }
 
+
   return (
     <div className='w-3/5 h-auto p-4 shadow card dark:bg-transparent dark:border-green-400'>
       <h1 className='dark:text-gray-300'>{title}</h1>
@@ -41,7 +42,10 @@ const CardStudent = ({
             {item === 'birthday' && (
               <span className='text-lg dark:text-gray-300'>{` (${getAge(
                 dataCard[item]
-              )} ${renderPhrase(dataCard[item], declination)})`}</span>
+              )} ${renderPhrase(
+                Number(getAge(dataCard[item])),
+                declination
+              )})`}</span>
             )}
           </div>
         ))}
