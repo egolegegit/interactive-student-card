@@ -1,7 +1,36 @@
-## Getting started
+# Модуль 2. Frontend
+## 9. Формы. Часть 1
 
-The main purpose of this was I was too lazy to start everything from scratch, such as setting up config for tailwind, absolute path, jsxinject, etc.
-so I create this to solve those problem, and you can use this too, you know, just clone this repo and start developing your next React application with Vite and Tailwind CSS.
+Практическое задание #2
+
+Интерактивная карточка студента
+
+В проекте используется
+
+> * [React](https://ru.reactjs.org/)
+> * [Vite](https://vitejs.dev/)
+> * [Tailwindcss](https://tailwindcss.com/) - utility-first CSS framework
+> * [Bootstrap](https://getbootstrap.com/) - most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins  
+> * SCSS
+> * Eslint, Prettier and VSCode configured (.vscode for tailwind intellisense)
+
+![alt tag](https://github.com/egolegegit/interactive-student-card/blob/main/screenshort/Screenshot%202021-10-14%20071701.jpg)
+
+![alt tag](https://github.com/egolegegit/interactive-student-card/blob/main/screenshort/Screenshot%202021-10-14%20071751.jpg 'Dark theme')
+
+![alt tag](https://github.com/egolegegit/interactive-student-card/blob/main/screenshort/Screenshot%202021-10-14%20071815.jpg)
+
+![alt tag](https://github.com/egolegegit/interactive-student-card/blob/main/screenshort/Screenshot%202021-10-14%20071845.jpg)
+
+![alt tag](https://github.com/egolegegit/interactive-student-card/blob/main/screenshort/Screenshot%202021-10-14%20071903.jpg)
+
+![alt tag](https://github.com/egolegegit/interactive-student-card/blob/main/screenshort/Screenshot%202021-10-14%20071919.jpg)
+
+![alt tag](https://github.com/egolegegit/interactive-student-card/blob/main/screenshort/Screenshot%202021-10-14%20071941.jpg)
+
+![alt tag](https://github.com/egolegegit/interactive-student-card/blob/main/screenshort/Screenshot%202021-10-14%20072006.jpg)
+
+
 
 #### Feature
 
@@ -18,19 +47,19 @@ so I create this to solve those problem, and you can use this too, you know, jus
 
 > Clone this repo
 
-```bash
+```
 git clone 
 ```
 
 > Go to directory
 
-```bash
+```
 cd 
 ```
 
 > Installing package
 
-```bash
+```
 npm install
 ```
 
