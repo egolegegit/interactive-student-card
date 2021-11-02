@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
-import '../styles/close.css'
+import '../styles/close.scss'
 
 import Close from '../assets/svg/Close'
 const Modal = ({ show, close, title }) => {

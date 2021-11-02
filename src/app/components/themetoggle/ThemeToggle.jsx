@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { ThemeContext } from '../../components/contexts/theme-context'
 import SunIcon from '../../assets/svg/SunIcon'
 import MoonIcon from '../../assets/svg/MoonIcon'
-import './themetoggle.css'
+import './themetoggle.scss'
 
 const ThemeToggle = () => {
   const themeContext = useContext(ThemeContext)
@@ -13,19 +13,19 @@ const ThemeToggle = () => {
   }
 
   return (
-    <label className="toggle-wrapper me-3" htmlFor="toggle">
+    <label className='toggle-wrapper me-3' htmlFor='toggle'>
       <div className={`toggle ${theme === 'dark' ? 'enabled' : 'disabled'}`}>
-        <span className="hidden">
+        <span className='hidden'>
           {theme === 'dark' ? 'Enable Light Mode' : 'Enable Dark Mode'}
         </span>
-        <div className="icons">
+        <div className='icons'>
           <SunIcon />
           <MoonIcon />
         </div>
         <input
-          id="toggle"
-          name="toggle"
-          type="checkbox"
+          id='toggle'
+          name='toggle'
+          type='checkbox'
           defaultChecked={theme === 'dark'}
           onClick={toggleState}
         />
